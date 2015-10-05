@@ -24,6 +24,7 @@
 - [Code Contribution Guidelines](developer/code-contribution.md)
 - [Developer Machine Setup](install/dev-setup.md)
 - [Mattermost Style Guide](developer/style-guide.md)
+- [API Overview] (api/README.md)
 
 ## End User Help
 
