@@ -1418,6 +1418,8 @@ func cmdSlackImport() {
 }
 
 func flushLogAndExit(code int) {
+	utils.Log.AccessLog.Close()
+	utils.Log.ErrorLog.Close()
 	l4g.Close()
 	time.Sleep(time.Second)
 	os.Exit(code)

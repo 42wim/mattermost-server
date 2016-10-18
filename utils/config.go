@@ -33,6 +33,55 @@ var CfgFileName string = ""
 var ClientCfg map[string]string = map[string]string{}
 var originalDisableDebugLvl l4g.Level = l4g.DEBUG
 
+var Log Logger
+
+func InitLog(s *model.LogSettings) {
+	if Log.AccessLog != nil {
+		Log.AccessLog.Close()
+	}
+	if Log.ErrorLog != nil {
+		Log.ErrorLog.Close()
+	}
+	Log.AccessLog = make(l4g.Logger)
+	Log.ErrorLog = make(l4g.Logger)
+	dname := s.FileLocation
+	if dname == "" {
+		dname = FindDir("logs")
+	}
+
+	if s.EnableFile {
+		flw := l4g.NewFileLogWriter(dname+"access.log", false)
+		flw.SetRotate(true)
+		flw.SetRotateLines(10000)
+		flw.SetFormat("%M")
+
+		flwe := l4g.NewFileLogWriter(dname+"error.log", false)
+		flwe.SetRotate(true)
+		flwe.SetRotateLines(10000)
+		flwe.SetFormat("%M")
+
+		Log.AccessLog.AddFilter("file", l4g.INFO, flw)
+		Log.ErrorLog.AddFilter("file", l4g.ERROR, flwe)
+	}
+
+	if s.EnableConsole {
+		level := l4g.DEBUG
+		if s.ConsoleLevel == "INFO" {
+			level = l4g.INFO
+		} else if s.ConsoleLevel == "WARN" {
+			level = l4g.WARNING
+		} else if s.ConsoleLevel == "ERROR" {
+			level = l4g.ERROR
+		}
+
+		lw := l4g.NewConsoleLogWriter()
+		lw.SetFormat("%M")
+
+		Log.AccessLog.AddFilter("stdout", level, lw)
+		Log.ErrorLog.AddFilter("stdout", level, lw)
+	}
+}
+
 func FindConfigFile(fileName string) string {
 	if _, err := os.Stat("./config/" + fileName); err == nil {
 		fileName, _ = filepath.Abs("./config/" + fileName)
@@ -118,6 +167,7 @@ func configureLog(s *model.LogSettings) {
 		flw.SetRotateLines(LOG_ROTATE_SIZE)
 		l4g.AddFilter("file", level, flw)
 	}
+	InitLog(s)
 }
 
 func GetLogFileLocation(fileLocation string) string {

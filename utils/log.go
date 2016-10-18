@@ -11,6 +11,11 @@ import (
 	l4g "github.com/alecthomas/log4go"
 )
 
+type Logger struct {
+	AccessLog l4g.Logger
+	ErrorLog  l4g.Logger
+}
+
 // DebugReader logs the content of the io.Reader and returns a new io.Reader
 // with the same content as the received io.Reader.
 // If you pass reader by reference, it won't be re-created unless the loglevel

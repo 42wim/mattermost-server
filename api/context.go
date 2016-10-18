@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"time"
 
 	l4g "github.com/alecthomas/log4go"
 	"github.com/gorilla/mux"
@@ -103,9 +104,9 @@ type handler struct {
 }
 
 func (h handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	l4g.Debug("%v", r.URL.Path)
-
+	rr := utils.NewResponseRecorder(w)
 	c := &Context{}
+	defer c.LogAccess(r, rr)
 	c.T, c.Locale = utils.GetTranslationsAndLocale(w, r)
 	c.RequestId = model.NewId()
 	c.IpAddress = GetIpAddress(r)
@@ -210,7 +211,7 @@ func (h handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if c.Err == nil {
-		h.handleFunc(c, w, r)
+		h.handleFunc(c, rr, r)
 	}
 
 	// Handle errors that have occoured
@@ -220,19 +221,19 @@ func (h handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		c.LogError(c.Err)
 		c.Err.Where = r.URL.Path
 
-		// Block out detailed error whenn not in developer mode
+		// Block out detailed error when not in developer mode
 		if !*utils.Cfg.ServiceSettings.EnableDeveloper {
 			c.Err.DetailedError = ""
 		}
 
 		if h.isApi {
-			w.WriteHeader(c.Err.StatusCode)
-			w.Write([]byte(c.Err.ToJson()))
+			rr.WriteHeader(c.Err.StatusCode)
+			rr.Write([]byte(c.Err.ToJson()))
 		} else {
 			if c.Err.StatusCode == http.StatusUnauthorized {
-				http.Redirect(w, r, c.GetTeamURL()+"/?redirect="+url.QueryEscape(r.URL.Path), http.StatusTemporaryRedirect)
+				http.Redirect(rr, r, c.GetTeamURL()+"/?redirect="+url.QueryEscape(r.URL.Path), http.StatusTemporaryRedirect)
 			} else {
-				RenderWebError(c.Err, w, r)
+				RenderWebError(c.Err, rr, r)
 			}
 		}
 	}
@@ -296,7 +297,8 @@ func (c *Context) LogError(err *model.AppError) {
 	if c.Path == "/api/v3/users/websocket" && err.StatusCode == 401 || err.Id == "web.check_browser_compatibility.app_error" {
 		c.LogDebug(err)
 	} else {
-		l4g.Error(utils.T("api.context.log.error"), c.Path, err.Where, err.StatusCode,
+		utils.Log.ErrorLog.Error("["+time.Now().Format("02/Jan/2006:15:04:05 -0700")+"] "+
+			utils.T("api.context.log.error"), c.Path, err.Where, err.StatusCode,
 			c.RequestId, c.Session.UserId, c.IpAddress, err.SystemMessage(utils.T), err.DetailedError)
 	}
 }
@@ -492,4 +494,8 @@ func RemoveAllSessionsForUserId(userId string) {
 
 func AddSessionToCache(session *model.Session) {
 	sessionCache.AddWithExpiresInSecs(session.Token, session, int64(*utils.Cfg.ServiceSettings.SessionCacheInMinutes*60))
+}
+
+func (c *Context) LogAccess(r *http.Request, rr *utils.ResponseRecorder) {
+	utils.Log.AccessLog.Info(fmt.Sprintf("%s - %s [%s] \"%s %s %s\" %d %d \"%s\"", c.IpAddress, c.Session.UserId, time.Now().Format("02/Jan/2006:15:04:05 -0700"), r.Method, r.RequestURI, r.Proto, rr.Status(), rr.Size(), r.UserAgent()))
 }
