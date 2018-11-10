@@ -6,7 +6,7 @@ package app
 import (
 	"testing"
 
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/model"
 )
 
 func TestLoadLicense(t *testing.T) {

@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/42wim/mattermost-server/app"
 	"github.com/icrowley/fake"
-	"github.com/mattermost/mattermost-server/app"
 	"github.com/spf13/cobra"
 )
 

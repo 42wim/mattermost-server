@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/mattermost/mattermost-server/app"
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/app"
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/utils"
 )
 
 func (api *API) InitOAuth() {

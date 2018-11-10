@@ -6,8 +6,8 @@ package storetest
 import (
 	"testing"
 
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
 )
 
 func TestLicenseStore(t *testing.T, ss store.Store) {

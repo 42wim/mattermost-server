@@ -18,11 +18,11 @@ import (
 
 	"net/http"
 
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/services/filesstore"
+	"github.com/42wim/mattermost-server/utils"
 	"github.com/jaytaylor/html2text"
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/services/filesstore"
-	"github.com/mattermost/mattermost-server/utils"
 )
 
 func encodeRFC2047Word(s string) string {

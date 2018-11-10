@@ -4,8 +4,8 @@
 package plugin
 
 import (
+	"github.com/42wim/mattermost-server/model"
 	"github.com/hashicorp/go-plugin"
-	"github.com/mattermost/mattermost-server/model"
 )
 
 // The API can be used to retrieve data or perform actions on behalf of the plugin. Most methods

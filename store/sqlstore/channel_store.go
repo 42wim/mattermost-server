@@ -14,11 +14,11 @@ import (
 	"github.com/mattermost/gorp"
 	"github.com/pkg/errors"
 
-	"github.com/mattermost/mattermost-server/einterfaces"
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/einterfaces"
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
+	"github.com/42wim/mattermost-server/utils"
 )
 
 const (

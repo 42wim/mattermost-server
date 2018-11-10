@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/model"
 	"github.com/hashicorp/go-plugin"
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/model"
 )
 
 type supervisor struct {

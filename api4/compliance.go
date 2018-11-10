@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/42wim/mattermost-server/model"
 	"github.com/avct/uasurfer"
-	"github.com/mattermost/mattermost-server/model"
 )
 
 func (api *API) InitCompliance() {

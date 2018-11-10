@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mattermost/mattermost-server/app"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
+	"github.com/42wim/mattermost-server/app"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -3091,7 +3091,6 @@ func TestRegisterTermsOfServiceAction(t *testing.T) {
 		t.Fatal(err)
 	}
 }
-
 
 func TestGetUserTermsOfService(t *testing.T) {
 	th := Setup().InitBasic()

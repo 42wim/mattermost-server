@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/utils"
 	"github.com/stretchr/testify/assert"
 )
 

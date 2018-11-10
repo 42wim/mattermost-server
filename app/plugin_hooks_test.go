@@ -15,10 +15,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/plugin"
-	"github.com/mattermost/mattermost-server/plugin/plugintest"
-	"github.com/mattermost/mattermost-server/plugin/plugintest/mock"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/plugin"
+	"github.com/42wim/mattermost-server/plugin/plugintest"
+	"github.com/42wim/mattermost-server/plugin/plugintest/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

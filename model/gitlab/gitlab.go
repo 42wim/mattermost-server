@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mattermost/mattermost-server/einterfaces"
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/einterfaces"
+	"github.com/42wim/mattermost-server/model"
 )
 
 type GitLabProvider struct {

@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
 	"github.com/mattermost/gorp"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
 )
 
 type SqlOAuthStore struct {

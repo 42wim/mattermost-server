@@ -413,15 +413,6 @@
   revision = "bbaefb05eaa0389ea712340066837c8ce4d287f9"
 
 [[projects]]
-  branch = "mattermost"
-  digest = "1:184692ed2b6b7d604bfe9d0d43a95cd0e0d9872b3dc49a6cb3c11a231bd9788d"
-  name = "github.com/mattermost/viper"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "362ff1e71044349d56d37d8b75cd317bff8369b9"
-  source = "https://github.com/mattermost/viper"
-
-[[projects]]
   digest = "1:cdb899c199f907ac9fb50495ec71212c95cb5b0e0a8ee0800da0238036091033"
   name = "github.com/mattn/go-runewidth"
   packages = ["."]
@@ -1015,7 +1006,6 @@
     "github.com/lib/pq",
     "github.com/mattermost/gorp",
     "github.com/mattermost/rsc/qr",
-    "github.com/mattermost/viper",
     "github.com/mattn/go-sqlite3",
     "github.com/minio/minio-go",
     "github.com/minio/minio-go/pkg/credentials",

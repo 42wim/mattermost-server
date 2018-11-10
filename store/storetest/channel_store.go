@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
 	"github.com/mattermost/gorp"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
 )
 
 type SqlSupplier interface {

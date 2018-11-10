@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/mattermost/mattermost-server/plugin"
+	"github.com/42wim/mattermost-server/plugin"
 )
 
 func TestIsValid(t *testing.T) {

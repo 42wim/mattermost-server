@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mattermost/mattermost-server/api4"
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/api4"
+	"github.com/42wim/mattermost-server/utils"
 )
 
 func TestPermissionsExport_rejectsUnlicensed(t *testing.T) {

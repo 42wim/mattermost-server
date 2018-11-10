@@ -8,8 +8,8 @@ import (
 	"os/exec"
 	"testing"
 
-	"github.com/mattermost/mattermost-server/api4"
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/api4"
+	"github.com/42wim/mattermost-server/model"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

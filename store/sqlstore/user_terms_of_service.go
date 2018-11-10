@@ -5,8 +5,8 @@ package sqlstore
 
 import (
 	"database/sql"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
 	"net/http"
 )
 

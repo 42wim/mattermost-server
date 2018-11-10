@@ -14,7 +14,7 @@ import (
 	"net/http/httptest"
 	"time"
 
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/model"
 )
 
 func TestCreateIncomingWebhookForChannel(t *testing.T) {

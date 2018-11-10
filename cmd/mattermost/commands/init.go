@@ -4,9 +4,9 @@
 package commands
 
 import (
-	"github.com/mattermost/mattermost-server/app"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/app"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/utils"
 	"github.com/spf13/cobra"
 )
 

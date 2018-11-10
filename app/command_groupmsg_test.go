@@ -6,7 +6,7 @@ import (
 	"github.com/nicksnyder/go-i18n/i18n"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/model"
 )
 
 func TestGroupMsgUsernames(t *testing.T) {

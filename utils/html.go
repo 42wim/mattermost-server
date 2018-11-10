@@ -14,8 +14,8 @@ import (
 	"strings"
 	"sync/atomic"
 
+	"github.com/42wim/mattermost-server/mlog"
 	"github.com/fsnotify/fsnotify"
-	"github.com/mattermost/mattermost-server/mlog"
 	"github.com/nicksnyder/go-i18n/i18n"
 )
 

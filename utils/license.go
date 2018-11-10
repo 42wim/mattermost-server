@@ -17,8 +17,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/model"
 )
 
 var publicKey []byte = []byte(`-----BEGIN PUBLIC KEY-----

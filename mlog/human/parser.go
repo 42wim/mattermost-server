@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/mattermost/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/mlog"
 	"io"
 	"strconv"
 	"strings"

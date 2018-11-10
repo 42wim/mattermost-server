@@ -4,10 +4,10 @@
 package app
 
 import (
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
+	"github.com/42wim/mattermost-server/utils"
 )
 
 type AutoUserCreator struct {

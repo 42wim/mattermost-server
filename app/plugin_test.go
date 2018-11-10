@@ -12,9 +12,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/plugin"
 	"github.com/gorilla/mux"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/plugin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

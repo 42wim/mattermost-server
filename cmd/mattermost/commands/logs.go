@@ -4,7 +4,7 @@
 package commands
 
 import (
-	"github.com/mattermost/mattermost-server/mlog/human"
+	"github.com/42wim/mattermost-server/mlog/human"
 	"github.com/spf13/cobra"
 	"io"
 	"os"

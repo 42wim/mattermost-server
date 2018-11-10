@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/model"
 )
 
 func LoadTimezones(fileName string) model.SupportedTimezones {

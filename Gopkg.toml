@@ -36,9 +36,9 @@
 
 # Fork for adding our own method to viper EnvSettings
 [[constraint]]
-  name = "github.com/mattermost/viper"
-  source = "https://github.com/mattermost/viper"
-  branch = "mattermost"
+  name = "github.com/42wim/viper-mattermost"
+  source = "https://github.com/42wim/viper-mattermost"
+  branch = "fixwim"
 
 # Keep back because of breaking API changes
 [[constraint]]

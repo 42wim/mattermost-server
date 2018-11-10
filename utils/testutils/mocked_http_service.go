@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"github.com/mattermost/mattermost-server/services/httpservice"
+	"github.com/42wim/mattermost-server/services/httpservice"
 )
 
 type MockedHTTPService struct {

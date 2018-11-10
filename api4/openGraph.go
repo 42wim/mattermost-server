@@ -6,9 +6,9 @@ package api4
 import (
 	"net/http"
 
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/utils"
 	"github.com/dyatlov/go-opengraph/opengraph"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/utils"
 )
 
 const OPEN_GRAPH_METADATA_CACHE_SIZE = 10000

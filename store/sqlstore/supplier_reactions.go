@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
 	"github.com/mattermost/gorp"
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
 )
 
 func initSqlSupplierReactions(sqlStore SqlStore) {

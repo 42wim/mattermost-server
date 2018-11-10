@@ -4,8 +4,8 @@
 package storetest
 
 import (
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/store/storetest"
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/store/storetest"
+	"github.com/42wim/mattermost-server/utils"
 )
 
 func TestMain(m *testing.M) {

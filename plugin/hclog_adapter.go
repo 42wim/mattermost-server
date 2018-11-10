@@ -8,8 +8,8 @@ import (
 	"log"
 	"strings"
 
+	"github.com/42wim/mattermost-server/mlog"
 	"github.com/hashicorp/go-hclog"
-	"github.com/mattermost/mattermost-server/mlog"
 )
 
 type hclogAdapter struct {

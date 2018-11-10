@@ -4,7 +4,7 @@
 package wsapi
 
 import (
-	"github.com/mattermost/mattermost-server/app"
+	"github.com/42wim/mattermost-server/app"
 )
 
 type API struct {

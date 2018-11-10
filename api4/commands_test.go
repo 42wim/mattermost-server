@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/model"
 )
 
 func TestEchoCommand(t *testing.T) {

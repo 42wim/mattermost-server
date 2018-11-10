@@ -7,10 +7,10 @@ import (
 	"database/sql"
 	"net/http"
 
-	"github.com/mattermost/mattermost-server/einterfaces"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/store"
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/einterfaces"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/store"
+	"github.com/42wim/mattermost-server/utils"
 )
 
 type SqlTermsOfServiceStore struct {

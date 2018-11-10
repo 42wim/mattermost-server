@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/mattermost/mattermost-server/model"
+	"github.com/42wim/mattermost-server/model"
 	"github.com/pkg/errors"
 )
 

@@ -13,11 +13,11 @@ import (
 	"net/url"
 	"strings"
 
+	"github.com/42wim/mattermost-server/mlog"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/plugin"
+	"github.com/42wim/mattermost-server/utils"
 	"github.com/disintegration/imaging"
-	"github.com/mattermost/mattermost-server/mlog"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/plugin"
-	"github.com/mattermost/mattermost-server/utils"
 )
 
 func (a *App) CreateTeam(team *model.Team) (*model.Team, *model.AppError) {

@@ -6,10 +6,10 @@ package api4
 import (
 	"net/http"
 
+	"github.com/42wim/mattermost-server/app"
+	"github.com/42wim/mattermost-server/model"
+	"github.com/42wim/mattermost-server/web"
 	"github.com/gorilla/mux"
-	"github.com/mattermost/mattermost-server/app"
-	"github.com/mattermost/mattermost-server/model"
-	"github.com/mattermost/mattermost-server/web"
 
 	_ "github.com/nicksnyder/go-i18n/i18n"
 )

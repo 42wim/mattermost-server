@@ -13,7 +13,7 @@ import (
 
 	"encoding/json"
 
-	"github.com/mattermost/mattermost-server/utils"
+	"github.com/42wim/mattermost-server/utils"
 )
 
 func TestConfigFlag(t *testing.T) {
